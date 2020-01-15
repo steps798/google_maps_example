@@ -1,0 +1,22 @@
+{
+  "presets": [
+    "@airy/maleo/babel",
+    "@babel/typescript",
+    [
+      "@emotion/babel-preset-css-prop",
+      {
+        "labelFormat": "[local]"
+      }
+    ]
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "@babel/plugin-proposal-object-rest-spread",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    "@babel/plugin-proposal-class-properties",
+    [
+      "@babel/plugin-transform-react-jsx",
+      { "pragma": "___EmotionJSX", "pragmaFrag": "React.Fragment" }
+    ]
+  ]
+}

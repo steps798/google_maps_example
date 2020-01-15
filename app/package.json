@@ -1,0 +1,33 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "description": "App Main",
+  "author": "Airy Engineering <engineering@airyrooms.com>",
+  "license": "MIT",
+  "private": true,
+  "engineStrict": true,
+  "engines": {
+    "node": "=10.15.3"
+  },
+  "scripts": {
+    "appdev": "maleo dev",
+    "appbuild": "maleo build",
+    "appstart": "node .maleo/server/server.js",
+    "clear": "rm -rf node_modules .maleo"
+  },
+  "keywords": [
+    "airyrooms",
+    "javascript",
+    "webpack",
+    "react"
+  ],
+  "dependencies": {
+    "@airy/app-http": "file:../packages/data-services",
+    "@airy/app-uikit": "file:../packages/design-systems",
+    "@airy/maleo": "canary",
+    "moment": "^2.24.0",
+    "react": "^16.8.6",
+    "rxjs": "^6.5.1",
+    "rxjs-compat": "^6.5.1"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "packages": [
+    "app",
+    "packages/*"
+  ],
+  "npmClient": "npm",
+  "version": "independent"
+}

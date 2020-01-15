@@ -1,0 +1,1 @@
+// export { SomeAtom } from './someAtom';

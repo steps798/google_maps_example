@@ -1,0 +1,25 @@
+# - name: Setting variables
+#   set_fact:
+#     config_nginx_file: "/app/config-nginx.yml"
+
+# - name: Nginx File
+#   debug:
+#     var: config_nginx_file
+
+# - include_vars: "{{ config_nginx_file }}"
+- name: Configure webserver with nginx
+hosts: webservers
+sudo: True
+tasks:
+- name: copy nginx config file
+copy: src=app/config-nginx.yml dest=/etc/nginx/sites-available/default
+- name: enable configuration
+file: >
+dest=/etc/nginx/sites-enabled/default
+src=/etc/nginx/sites-available/default
+state=link
+- name: copy index.html
+template: src=templates/index.html.j2 dest=/usr/share/nginx/html/index.html
+mode=0644
+- name: restart nginx
+service: name=nginx state=restarted

@@ -1,0 +1,4 @@
+configurations:
+  - host: victory.airyrooms.test
+    target: localhost
+    port: 3000

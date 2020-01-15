@@ -1,0 +1,25 @@
+{
+  "name": "@airy/app-http",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "description": "App Data Services",
+  "license": "MIT",
+  "private": true,
+  "engineStrict": true,
+  "engines": {
+    "node": "=10.15.3"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "rxios": "^1.1.2",
+    "rxjs": "^6.5.1",
+    "rxjs-compat": "^6.5.1"
+  }
+}
